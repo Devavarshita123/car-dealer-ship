@@ -65,5 +65,52 @@ npm install
 npm start
 Frontend runs at → http://localhost:3000/
 
+![Architecture](images/architecture.png)
+
+**API Endpoints Django Proxy Services**
+GET    /get_cars/             - Get list of cars
+GET    /get_dealers/          - Get list of all dealers
+GET    /get_dealers/:state    - Get dealers by state
+GET    /dealer/:id            - Get dealer by ID
+GET    /review/dealer/:id     - Get reviews for a dealer
+POST   /add_review/           - Add review for a dealer
+
+**Node.js Dealers & Reviews Service**
+GET    /fetchDealers
+GET    /fetchDealer/:id
+GET    /fetchReviews
+GET    /fetchReview/dealer/:id
+POST   /insertReview
+
+**IBM Cloud Sentiment Analyzer**
+POST   /analyze/:text          - Analyze sentiment of text (positive, negative, neutral)
+
+**Testing**
+**Backend Tests**
+pytest
+**Frontend Tests**
+npm test
+
+**Deployment**
+Frontend: Netlify or Vercel
+Backend: IBM Cloud, Render, or Railway
+Node Service: Dockerized & deployed on cloud container platforms
+
+**Environment Variables**
+Create a .env file:
+DB_URL=mongodb+srv://...
+SECRET_KEY=your-django-secret-key
+API_KEY=your-sentiment-analyzer-key
+
+**Author**
+Devavarshita
+IBM Full Stack Software Developer
+GitHub: https://github.com/Devavarshita123
+
+**License**
+This is **one complete file**—you can copy it into `README.md` as-is.  
+If you want, I can also **add badges, live demo links, and a table of contents** to make it look professional on GitHub.  
+Do you want me to do that next?
+
 
 
