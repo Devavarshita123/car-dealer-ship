@@ -1,161 +1,69 @@
-# 🌟 **Smart Health Tracker – Full Stack Application**
-Capstone Project for **IBM Full Stack Software Developer Professional Certificate**
+# 🌟 Car Dealerships Web Application
+Final Project – IBM Full Stack Software Developer Professional Certificate
 
----
+## Project Overview
+The **Car Dealerships Web Application** is a full-stack solution that allows users to explore car dealers, read and post reviews, and analyze customer feedback sentiments. The project integrates Django, React, Node.js, MongoDB, and IBM Cloud services, showcasing a microservices-based architecture and dynamic web pages.
 
-## 📝 **Project Overview**
-**Smart Health Tracker** is a full-stack web application designed to help users monitor their daily health activities, track their diet, analyze food nutrition, and receive personalized health recommendations.
+## Key Features
+- User registration and login using Django authentication system  
+- Display all car dealers and filter by state  
+- View and add reviews for dealers  
+- Sentiment analysis of reviews via IBM Cloud Code Engine  
+- Backend storage with MongoDB (dealers & reviews) and SQLite (car models & makes)  
+- Dynamic pages with Django templates and React frontend  
+- Cloud deployment with Docker and Kubernetes  
+- CI/CD pipeline with code linting and automated deployment  
 
-This sample README can be used as a starting point for any full-stack project you build later.
+## Tech Stack
+**Frontend:** React.js, HTML, CSS, JavaScript, Bootstrap / Material UI  
+**Backend:** Django & Django REST Framework, Node.js (Express) for Dealers & Reviews Service  
+**Database:** SQLite (Car Make & Car Model), MongoDB (Dealers & Reviews)  
+**DevOps / Tools:** Docker, Git & GitHub, CI/CD (GitHub Actions), IBM Cloud Code Engine, Kubernetes  
 
----
-
-## 🎯 **Features**
-- 🔐 User registration & login  
-- 🍎 Food logging with calorie & nutrition analysis  
-- 📊 Dashboard with charts & progress tracking  
-- 📱 Responsive UI for mobile & desktop  
-- 🗄️ Database storage (users, meals, activities)  
-- 🌐 REST APIs for data exchange  
-- ☁️ Cloud deployment  
-
----
-
-## 🛠️ **Tech Stack**
-
-### **Frontend**
-- React.js  
-- HTML, CSS, JavaScript  
-- Bootstrap / Material UI  
-
-### **Backend**
-- Django REST Framework  
-or  
-- Flask (Python)
-
-### **Database**
-- MongoDB  
-or  
-- PostgreSQL / MySQL  
-
-### **DevOps / Tools**
-- Docker (optional)  
-- Git & GitHub  
-- CI/CD (GitHub Actions)  
-- Cloud Deployment (IBM Cloud / Render / Netlify)
-
----
-
-## 📂 **Project Structure**
-```
-smart-health-tracker/
+## Project Structure
+car-dealerships-app/
 │── backend/
-│   ├── manage.py
-│   ├── requirements.txt
-│   └── app/
+│ ├── manage.py
+│ ├── requirements.txt
+│ └── app/
+│ ├── models.py
+│ ├── views.py
+│ └── templates/
 │── frontend/
-│   ├── package.json
-│   └── src/
+│ ├── package.json
+│ └── src/
+│── node_service/
+│ ├── server.js
+│ └── Dockerfile
 │── images/
-│   └── dashboard.png
+│ └── dashboard.png
 │── README.md
-```
 
----
 
-## ▶️ **How to Run the Project Locally**
+## How to Run the Project Locally
 
-### **1️⃣ Clone the Repository**
+**1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/smart-health-tracker.git
-cd smart-health-tracker
-```
+git clone https://github.com/yourusername/car-dealerships-app.git
+cd car-dealerships-app
 
-### **2️⃣ Backend Setup**
-```bash
+**2. Backend Setup**
 cd backend
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-```
 Backend runs at → http://127.0.0.1:8000/
 
-### **3️⃣ Frontend Setup**
-```bash
+**3. Node.js Dealers & Reviews Service**
+cd node_service
+npm install
+node server.js
+
+**4. Frontend Setup**
 cd frontend
 npm install
 npm start
-```
 Frontend runs at → http://localhost:3000/
 
----
 
-## 🖼️ **Screenshots**
 
-Add images in the `/images` folder and reference them like this:
-
-```markdown
-![Dashboard](images/dashboard.png)
-```
-
-Sample placeholder:
-
-![Dashboard](images/dashboard.png)
-
----
-
-## 📡 **API Endpoints (Sample)**
-```
-GET    /api/users/
-POST   /api/auth/login/
-POST   /api/food/add/
-GET    /api/health/summary/
-```
-
----
-
-## 🧪 **Testing**
-
-### Backend Tests
-```bash
-pytest
-```
-
-### Frontend Tests
-```bash
-npm test
-```
-
----
-
-## 🚀 **Deployment**
-
-### **Frontend**
-- Netlify  
-- Vercel  
-
-### **Backend**
-- IBM Cloud  
-- Render  
-- Railway  
-
-### **Environment Variables**
-Create a `.env` file:
-
-```
-DB_URL=mongodb+srv://...
-SECRET_KEY=your-secret-key
-API_KEY=your-api-key
-```
-
----
-
-## 👨‍💻 **Author**
-**Your Name Here**  
-IBM Full Stack Software Developer  
-GitHub: https://github.com/yourusername  
-
----
-
-## 📄 **License**
-MIT License
