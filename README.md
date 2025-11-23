@@ -43,7 +43,7 @@ car-dealerships-app/
 ## How to Run the Project Locally
 
 **1. Clone the Repository**
-```bash
+bash
 git clone https://github.com/yourusername/car-dealerships-app.git
 cd car-dealerships-app
 
