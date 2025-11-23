@@ -65,7 +65,7 @@ npm install
 npm start
 Frontend runs at → http://localhost:3000/
 
-![Architecture](images/architecture.png)
+![Architecture](Screenshot 2025-11-23 225733.png)
 
 **API Endpoints Django Proxy Services**
 GET    /get_cars/             - Get list of cars
