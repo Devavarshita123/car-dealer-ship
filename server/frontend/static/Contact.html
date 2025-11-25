@@ -1,118 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Car Dealership</title>
-    <style>
-        /* General body styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    <title>Contact Us - Best Cars Dealership</title>
 
-        /* Header / Navigation Bar */
-        header {
-            background-color: #0C9; /* primary color */
-            padding: 15px 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 16px;
-            padding: 6px 12px;
-            border-radius: 4px;
-        }
-
-        /* Active link styling */
-        nav a.active {
-            background-color: #fff;
-            color: #0C9;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            background-color: #fff;
-            color: #0C9;
-        }
-
-        /* Main content */
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #0C9;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .contact-info div {
-            margin-bottom: 15px;
-        }
-
-        .contact-info span {
-            font-weight: bold;
-            color: #0C9;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #0C9;
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html" class="active">Contact Us</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+        <h2 class="small_header" style="padding-right:5%;">Dealerships</h2>
 
-<main>
-    <h1>Contact Us</h1>
-    <p>We would love to hear from you! Whether you have questions about our cars, services, or financing options, feel free to reach out. Our team is here to help you find the perfect vehicle and provide exceptional service.</p>
-    
-    <div class="contact-info">
-        <div><span>Address:</span> 1234 Auto Drive, Motor City, CA 90001</div>
-        <div><span>Phone:</span> +1 (555) 123-4567</div>
-        <div><span>Email:</span> contact@cardealership.com</div>
-        <div><span>Working Hours:</span> Mon-Fri: 9:00 AM - 6:00 PM | Sat: 10:00 AM - 4:00 PM</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navitems">
+                <li class="nav_item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav-link active" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</main>
+</nav>
 
-<footer>
-    &copy; 2025 Car Dealership. All rights reserved.
-</footer>
+<!-- MAIN CONTACT CARD -->
+<div class="card container">
+
+    <div class="banner details">
+        We'd love to hear from you! Reach out for inquiries about cars, services, financing, or anything else.
+    </div>
+
+    <div class="row">
+
+        <!-- Contact Info Block -->
+        <div class="card">
+            <div class="details">
+                <p class="title">📍 Address</p>
+                <p>Sai Car Dealers, Tadigadapa, pin:521137</p>
+
+                <p class="title">📞 Phone</p>
+                <p>8179071445</p>
+
+                <p class="title">📧 Email</p>
+                <p>contact@bestcars.com</p>
+
+                <p class="title">⏰ Working Hours</p>
+                <p>Mon–Fri: 9 AM – 6 PM</p>
+                <p>Sat: 10 AM – 4 PM</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+            <div class="details">
+                <p class="title">Send Us a Message</p>
+
+                <form action="/send-message" method="POST" class="form_panel">
+
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+
+                    <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px;">
+                        Send Message
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
