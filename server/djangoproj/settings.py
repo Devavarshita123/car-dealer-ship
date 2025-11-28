@@ -28,7 +28,12 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','https://devavarshita-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/']
+ALLOWED_HOSTS = [
+    'localhost',
+    'devavarshita-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
+    'devavarshita-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
+]
+
 #ensures only localhost or deployed urls are served.
 CSRF_TRUSTED_ORIGINS = ['https://devavarshita-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/','https://devavarshita-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
 
